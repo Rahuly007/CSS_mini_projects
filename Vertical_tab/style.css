@@ -1,0 +1,63 @@
+*{
+    box-sizing: border-box;
+}
+
+.tab{
+    float:left;
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    width: 30%;
+    height: 300px;
+}
+
+.tab button{
+    display: block;
+    background-color: inherit;
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.tab button:hover{
+    background-color: rgb(214, 209, 209);
+}
+
+.tab button.active{
+    background-color: #5e8de6;
+    box-shadow: 0px 2px 3px #288ac7;
+    color: white;
+}
+
+.tabcontent{
+    float: left;
+    width: 70%;
+    height: 300px;
+    border-left: none;
+    border: 1px solid black;
+    padding: 7px 20px;
+    animation: fadeEffect 1s;
+}
+
+.topright{
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bolder;
+
+    &:hover{
+        color: red;
+    }
+}
+
+
+
+@keyframes fadeEffect {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}

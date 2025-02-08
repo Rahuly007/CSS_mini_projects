@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.topnavbar {
+    overflow: hidden;
+    background-color: rgb(50, 52, 52);
+}
+
+.topnavbar a {
+    float: left;
+    /* or we can use display: inline-block; instead of float:left; */
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 34px;
+    text-align: center;
+
+    &:hover {
+        background-color: rgb(138, 152, 140);
+        color: black;
+    }
+
+    &.active {
+        background-color: green;
+        color: whitesmoke;
+    }
+}
+
+.topnavbar a.icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnavbar a:not(:first-child) {
+        display: none;
+    }
+
+    .topnavbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnavbar.responsive {
+        position: relative;
+    }
+
+    .topnavbar.responsive a.icon {
+        position: absolute; 
+        right: 0;
+        top: 0;
+    }
+
+    .topnavbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
