@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Navbar</title>
+</head>
+<body>
+    <div id="myNav" class="overlay" >
+        <a href="javascript:void(0);" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#">About</a>
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">Info</a>
+        </div>
+    </div>
+    <span style="font-size: 28px;cursor: pointer;" onclick="openNav()">&#9776; Open</span>
+
+    <script>
+        // console.log("inside script");
+        
+        function openNav(){
+            document.getElementById("myNav").style.width = "100%";
+           
+        }
+        function closeNav(){
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+</body>
+</html>
